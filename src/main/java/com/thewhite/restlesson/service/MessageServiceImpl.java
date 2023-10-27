@@ -7,6 +7,7 @@ import com.thewhite.restlesson.service.argument.CreateMessageArgument;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,6 +29,7 @@ public class MessageServiceImpl implements MessageService {
         repository.create(Message.builder()
                                  .id(id)
                                  .text(argument.getText())
+                                 .createDate(LocalDateTime.now())
                                  .build());
     }
 

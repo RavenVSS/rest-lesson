@@ -1,5 +1,6 @@
 package com.thewhite.restlesson.service.argument;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 
@@ -8,6 +9,7 @@ import lombok.Value;
  */
 @Value
 @Builder
+@AllArgsConstructor(staticName = "of")
 public class CreateMessageArgument {
     String text;
 }
