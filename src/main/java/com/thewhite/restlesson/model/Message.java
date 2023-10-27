@@ -6,6 +6,8 @@ import lombok.experimental.FieldDefaults;
 import static lombok.AccessLevel.PRIVATE;
 
 /**
+ * Сущность - сообщение
+ *
  * @author Sergei Vorona
  */
 @Getter
@@ -14,8 +16,10 @@ import static lombok.AccessLevel.PRIVATE;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
-public class Entity {
+public class Message {
 
     Long id;
+
+    String text;
 
 }
