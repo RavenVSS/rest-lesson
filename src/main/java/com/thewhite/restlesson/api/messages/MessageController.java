@@ -1,8 +1,8 @@
-package com.thewhite.restlesson.controller;
+package com.thewhite.restlesson.api.messages;
 
-import com.thewhite.restlesson.controller.dto.CreateMessageDto;
-import com.thewhite.restlesson.controller.dto.MessageDto;
-import com.thewhite.restlesson.controller.mapper.MessageMapper;
+import com.thewhite.restlesson.api.messages.dto.CreateMessageDto;
+import com.thewhite.restlesson.api.messages.dto.MessageDto;
+import com.thewhite.restlesson.api.messages.mapper.MessageMapper;
 import com.thewhite.restlesson.model.Message;
 import com.thewhite.restlesson.service.MessageService;
 import com.thewhite.restlesson.service.argument.CreateMessageArgument;

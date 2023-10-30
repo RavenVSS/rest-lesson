@@ -1,7 +1,7 @@
-package com.thewhite.restlesson.controller.mapper;
+package com.thewhite.restlesson.api.messages.mapper;
 
-import com.thewhite.restlesson.controller.dto.CreateMessageDto;
-import com.thewhite.restlesson.controller.dto.MessageDto;
+import com.thewhite.restlesson.api.messages.dto.CreateMessageDto;
+import com.thewhite.restlesson.api.messages.dto.MessageDto;
 import com.thewhite.restlesson.model.Message;
 import com.thewhite.restlesson.service.argument.CreateMessageArgument;
 import org.mapstruct.Mapper;

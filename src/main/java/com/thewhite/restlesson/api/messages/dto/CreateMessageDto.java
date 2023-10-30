@@ -1,4 +1,4 @@
-package com.thewhite.restlesson.controller.dto;
+package com.thewhite.restlesson.api.messages.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
