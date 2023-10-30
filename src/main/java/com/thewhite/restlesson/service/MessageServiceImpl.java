@@ -23,14 +23,14 @@ public class MessageServiceImpl implements MessageService {
     private final MessageRepository repository;
 
     @Override
-    public void create(CreateMessageArgument argument) {
+    public Message create(CreateMessageArgument argument) {
         long id = repository.getNextId();
 
-        repository.create(Message.builder()
-                                 .id(id)
-                                 .text(argument.getText())
-                                 .createDate(LocalDateTime.now())
-                                 .build());
+        return repository.create(Message.builder()
+                                        .id(id)
+                                        .text(argument.getText())
+                                        .createDate(LocalDateTime.now())
+                                        .build());
     }
 
     @Override

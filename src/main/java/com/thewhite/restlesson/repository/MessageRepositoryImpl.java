@@ -20,8 +20,9 @@ public class MessageRepositoryImpl implements MessageRepository {
     private long nextId = 0L;
 
     @Override
-    public void create(Message message) {
+    public Message create(Message message) {
         myPerfectDb.put(message.getId(), message);
+        return message;
     }
 
     @Override

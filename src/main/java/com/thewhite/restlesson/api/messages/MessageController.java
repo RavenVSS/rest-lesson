@@ -30,16 +30,18 @@ public class MessageController {
 
     @PostMapping("create")
     @Operation(description = "Создать сообщение")
-    public void create(@RequestBody CreateMessageDto dto) {
+    public MessageDto create(@RequestBody CreateMessageDto dto) {
         CreateMessageArgument argument = mapper.toCreateArgument(dto);
 
-        service.create(argument);
+        return mapper.toDto(service.create(argument));
     }
 
     @GetMapping("create")
     @Operation(description = "Создать сообщение")
-    public void create(@RequestParam("text") String text) {
-        service.create(CreateMessageArgument.of(text));
+    public MessageDto create(@RequestParam("text") String text) {
+        Message message = service.create(CreateMessageArgument.of(text));
+
+        return mapper.toDto(message);
     }
 
     @GetMapping("{id}")

@@ -15,6 +15,9 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
+    /**
+     * При появлении исключения {@link NotFoundException} возвращает статус 404 и сообщение об ошибке.
+     */
     @ResponseStatus(NOT_FOUND)
     @ExceptionHandler(NotFoundException.class)
     public @ResponseBody ErrorDto processNotFoundException(NotFoundException exception) {

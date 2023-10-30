@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface MessageRepository {
 
-    void create(Message message);
+    Message create(Message message);
 
     Message findById(Long id);
 

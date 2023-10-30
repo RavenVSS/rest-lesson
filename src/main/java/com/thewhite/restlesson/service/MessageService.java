@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface MessageService {
 
-    void create(CreateMessageArgument argument);
+    Message create(CreateMessageArgument argument);
 
     Message getExisting(Long id);
 
