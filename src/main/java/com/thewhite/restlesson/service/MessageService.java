@@ -14,5 +14,7 @@ public interface MessageService {
 
     Message getExisting(Long id);
 
+    List<Message> search(String searchText);
+
     List<Message> getAll();
 }

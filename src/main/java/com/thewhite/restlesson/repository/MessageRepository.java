@@ -15,5 +15,7 @@ public interface MessageRepository {
 
     List<Message> findAll();
 
+    List<Message> findAllBySearchString(String searchString);
+
     long getNextId();
 }

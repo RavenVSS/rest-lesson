@@ -1,12 +1,16 @@
 package com.thewhite.restlesson.repository;
 
 import com.thewhite.restlesson.model.Message;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
+import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
 
 /**
  * Репозиторий с "базой данных" в памяти.
@@ -33,6 +37,14 @@ public class MessageRepositoryImpl implements MessageRepository {
     @Override
     public List<Message> findAll() {
         return new ArrayList<>(myPerfectDb.values());
+    }
+
+    @Override
+    public List<Message> findAllBySearchString(String searchString) {
+        return myPerfectDb.values()
+                          .stream()
+                          .filter(message -> containsIgnoreCase(message.getText(), searchString))
+                          .collect(Collectors.toList());
     }
 
     /**

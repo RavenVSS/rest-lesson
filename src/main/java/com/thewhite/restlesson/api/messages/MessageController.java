@@ -36,12 +36,12 @@ public class MessageController {
         return mapper.toDto(service.create(argument));
     }
 
-    @GetMapping("create")
-    @Operation(description = "Создать сообщение")
-    public MessageDto create(@RequestParam("text") String text) {
-        Message message = service.create(CreateMessageArgument.of(text));
+    @GetMapping("search")
+    @Operation(description = "Найти сообщения")
+    public List<MessageDto> search(@RequestParam("searchText") String searchText) {
+        List<Message> messages = service.search(searchText);
 
-        return mapper.toDto(message);
+        return mapper.toDtoList(messages);
     }
 
     @GetMapping("{id}")

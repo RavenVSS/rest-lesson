@@ -40,6 +40,11 @@ public class MessageServiceImpl implements MessageService {
     }
 
     @Override
+    public List<Message> search(String searchText) {
+        return repository.findAllBySearchString(searchText);
+    }
+
+    @Override
     public List<Message> getAll() {
         return repository.findAll();
     }
