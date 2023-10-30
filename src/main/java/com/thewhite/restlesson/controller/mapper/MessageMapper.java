@@ -8,10 +8,12 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
+import static org.mapstruct.MappingConstants.ComponentModel.SPRING;
+
 /**
  * @author Sergei Vorona
  */
-@Mapper
+@Mapper(componentModel = SPRING)
 public interface MessageMapper {
 
     CreateMessageArgument toCreateArgument(CreateMessageDto dto);
