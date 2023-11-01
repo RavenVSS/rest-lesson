@@ -22,7 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("messages")
 @RequiredArgsConstructor
-@Tag(name = "Контроллер для работы с обращениями")
+@Tag(name = "Контроллер для работы с сообщениями")
 public class MessageController {
 
     private final MessageService service;
