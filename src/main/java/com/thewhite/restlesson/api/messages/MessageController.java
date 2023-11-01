@@ -54,9 +54,7 @@ public class MessageController {
 
     @GetMapping("{id}")
     @Operation(description = "Получить сообщение")
-    @ApiResponse(description = "Сообщение не найдено", responseCode = "404",
-                 content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = ErrorDto.class)))
+    @ApiResponse(description = "Сообщение не найдено", responseCode = "404")
     public MessageDto get(@Parameter(description = "id сообщения")
                           @PathVariable("id") Long id) {
         Message message = service.getExisting(id);
